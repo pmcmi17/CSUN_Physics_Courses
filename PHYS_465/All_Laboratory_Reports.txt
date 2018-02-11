@@ -1,0 +1,301 @@
+PHYS 465 All Laboratories:
+
+Spectrometer Laboratory
+
+Goal of the Experiment:
+
+The goal of this experiment was to obtain an experimental value for the Rydberg constant. We measured the positions of the spectral lines emitted by a hydrogen/deuterium lamp to obtain the wavelength of the emitted light. To measure the positions, we used the given telescope set-up, which allowed us to measure the angular positions of the spectral lines. Along with the order of diffraction and the distance between gratings, we used the angular positions to determine the wavelength of the diffracted light. After obtaining the wavelength, we were able to use some basic principles in atomic physics to find the experimental value of the Rydberg constant from the slope of 1/(wavelength) VS (1/4-1/n^2). This equation describes the wavelength of emitted light resulting from an electron transitioning from a higher energy state to the n = 2 state (where n is the principle quantum number). This result arises from basic atomic and quantum physics, starting with the energy of the electron and its relation to the nucleus. When an excited electron moves to a lower energy state, it emits its energy in the form of a photon. Since the orbits of the electron are quantized, the energy of the photons emitted are quantized. This explains the wavelength's dependence on the principle quantum number, since the energy of the photon is inversely proportional to the wavelength of the photon. The diffraction grating scatters the incident light from the lamp, and causes an interference pattern which arrises in the form of spectral lines. The position of the spectral lines can be measured using the telescope apparatus used in this experiment. We used our calculated value of the Rydberg constant to then find the expected wavelength of the emitted light. We compared the values that were measured for the spectral lines positions to their theoretical values using the experimental Rydberg constant. We compared all of the values by their relative error, or percentage difference. 
+
+Experimental Setup and Data Collection:
+
+We followed the laboratory manual carefully during the set-up portion of this experiment. We began with the telescope apparatus and the hydrogen/deuterium lamp screwed to a plate. The grating was already in place for us, so the only set-up required was the calibration of the instruments. We focused the telescope at a very far object, as requested by the manual. We aligned the telescope carefully with the hydrogen lamp, so that the grating was perpendicular to the telescope arms. Then, we moved the apparatus' angular measurement plate so that the zero position corresponded to the configuration where the arms were perfectly parallel, and the image of the lamp was on the left side of the viewer crosshairs). This way, no correction would be needed when measuring the spectral lines, since the initial angular position would correspond 0. 
+Data were collected in a mostly dark room. We did two runs of data collection, and took the second run of data collection over the first, since we did not carefully calibrate the telescope initially. We slowly moved the telescope until we found a spectral line, and placed the crosshairs of the telescope viewer on the left side of the line (since this is how we calibrated the instrument). We noted the angular position on the apparatus (accurate to about 1/10th of a degree). We did this for both the left and right sides of the telescope and noted all of the positions directly in an Excell spreadsheet, rather than a notebook. I have included the Excell spreadsheet of the raw data below. The color is the color of the spectral line observed. "ni" is the principe quantum number used (as described in the theory section of the lab manual). "m" is the order of diffraction. We used the purple lines to determine the order of diffraction, as the lab manual suggested. "Theta R" is the angular measurement of the spectral lines while moving the telescope to the right, and "Theta L" is the angular measurement of the spectral lines while moving the telescope to the left. We see less lines of the right due to the light in the room on the right side. This is partly due to the open door, and partly due to another group's apparatus and computer screens. 
+
+Color	ni	m	Theta R (Degrees)		Theta L (Degrees)
+purple	6	1	7.1		7.2	
+turquoise	4	1	8.1		8.1	
+red	3	1	11.1		11.4	
+purple	6	2	not visible		15	
+turquoise	4	2	16.8		16.9	
+purple	6	3	not visible		22.9	
+
+
+Data Analysis:
+
+Our measured quantity is the angular position of the spectral lines produced from the light of the hydrogen/deuterium lamp diffracting off of the grating. This measurement will be used to calculate the Rydberg constant with the use of the two equations below. 
+We mainly used two equations. 
+d * sin(theta) = m * (lambda)
+"d" is the distance between the gratings, "theta" is the measured angular position of the spectral line, "m" is the order of diffraction, and "lambda" is the (calculated) wavelength of the light in the spectral line. "d" was given on the apparatus, and is 1/(300000) meters (300 lines per millimeter). "m" was found by analyzing the color and pattern of the spectrum. 
+The other equation is:
+(lambda)^(-1) = R * ((1 / 4) - (1 / n^2))
+"lambda" is the calculated wavelength of light, found from the first equation. "R" is the Rydberg constant that we hope to obtain, and "n" is the principle quantum number which is obtained qualitatively from the color of the light. 
+We were not instructed to propagate errors, since measuring the angular position to 1/10 of a degree is extremely precise in this experiment. 
+Our only graph is the one requested in the lab manual. It plots (lambda)^(-1) vs (1/4-1/n^2). As can be shown from the second equation, this ratio gives the Rydberg constant. When these data are plotted, the slope of the line produced gives the value of the Rydberg constant. The best fit line is a straight line, which we forced to intercept the axes at the origin. 
+(INSERT GRAPH)
+Here is the entire Excel sheet, which was used to analyze the data:
+(INSERT REST OF EXCEL SHEET. ALSO ATTACH IN COMMENT).
+
+Results and Discussion:
+
+We mainly used two equations. (I described all of the variables in the Data Analysis section of the assignment). 
+d * sin(theta) = m * (lambda)
+ 
+(lambda)^(-1) = R * ((1 / 4) - (1 / n^2))
+Our main result is the experimental value of the Rydberg constant. We obtained the Rydberg constant to be 1.0 x 10^7 (ten million). The actual, accepted value of the Rydberg constant is 1.09 x 10^7. Our values are not equal, and the relative error between the two values is about 8.3 % (see table below). Additionally, we were requested to calculate the relative error between the measured wavelengths of light, and the expected wavelengths using the experimentally obtained Rydberg constant (see table below). 
+% Difference of the Rydberg Constant:			8.256880734
+Using our Rydberg:			
+
+Color	1/Lambda	Lambda	% Difference
+purple	2222222.222	0.00000045	4.866959877
+turquoise	1875000	5.33333E-07	10.01055062
+red	1388888.889	0.00000072	7.092600875
+
+All values in this table were calculated in Excel, using the experimentally obtained Rydberg constant. 
+It is clear to see that the measured values are far from perfect. This is due to several extraneous factors. The instruments were likely not calibrated correctly. The lamp (light source) was likely not close enough to the grating, so the intensity of the light was not good enough to see a large number of diffraction orders. Additionally, we did not conduct our experiment in a purely dark room. The door of the room was open, and light from the hallway was allowed in. There was also another group in the room with us, performing an experiment at the same time. Their experiment involved light, and that light source likely effected our data collection. Also, the instrument was only accurate to 1/10th of a degree, which is not perfectly precise for the measurements required. 
+Overall, we are satusfied with the experiment's results. Our value of the Rydberg constant is accurate to withing 10% of the accepted value, which is quite precise considering our environment and sources of error. The values for the wavelengths of light also show that the theory is correct. The expected values found are all within about 10% of the measured values, which again, considering the environment, are quite precise. In the future, we will remove all possible sources of light, and ensure that the light source is closer to the grating. Also, finer tuning of the instruments will be required to get better measurements. 
+ 
+Michelson Interferometer Laboratory
+
+Goal of the Experiment:
+
+The general goal of the experiment was to measure the refractive index of air. The refractive index of air is the ratio of the velocity of light to the velocity of light in air (n = c/v). The laboratory focused on measuring the refractive index of air through the use of the Michelson Interferometer. A Michelson Interferometer uses two beam interference to create a concentric circular interference pattern. A single source of light (632.8 nm) is produced and split by a beam splitter. One beam is sent vertically, and another continues on horizontally. After these two separate waves are transmitted, they are reflected off of mirrors, and sent back to the beam splitter which recombines them. The interference pattern is created after the beams are recombined, since the two beams will be out of phase, depending on their path distance. For this experiment, we were not concerned directly with the interference pattern, but how the pattern changed depending on the medium in which the light traveled. So we did not care how much the arm lengths differed, as long as a clear interference pattern was visible. 
+
+We placed an air chamber in one of the light paths, and were able to change the pressure of the air in the chamber. As the air pressure changed, the interference pattern expanded, creating more rings. This is because the density of air (and thus the distance the light travels) changes with pressure. By knowing the initial air pressure (1atm), and the length of the air chamber (80mm), the wavelength of the light (632.8nm), the change of pressure (variable), and the number of concentric rings which pass a point on the interference pattern (variable), we could calculate the refractive index of air (to be discussed in the data analysis section). 
+
+For this lab, we measured the change in pressure in millimeters of Mercury, and the number of concentric rings which passed an agreed upon point on the display. We found a theoretical value of the refractive index of air to compare our value to (1.0025). We were not instructed to graph anything this lab, however we took many measurements and averaged their results. 
+
+Experimental Setup and Data Collection:
+
+Our laboratory equipment consisted of a Michelson interferometer, a variable pressure air chamber, and an interference pattern detector, connected to a computer monitor (for a picture of the setup, see the attached file ‘Michelson_Interferometer_Sketch.jpg’). 
+
+We collected data on two parameters. These parameters were the change in pressure, and the number of interference rings which passed an agreed upon point on the display. We chose this point because of an existing line which was visible on the computer monitor. 
+
+We began a measurement by squeezing the air pressure bulb a random number of times (this would ensure that we obtained a variety of pressure differences, so our average would reflect pressure differences from a wide source). We would then record the pressure on the meter on a piece of paper (in mmHg). This is our parameter (delta)P. Then, we would gently allow the air pressure to drop through the release value on the apparatus. While we released the valve, we would count the number of rings which passed our point of interest. This would be our parameter N. This was all of the raw data which we needed in order to calculate the refractive index of air. Altogether, we made twenty measurements. Raw data is attached in the Excel sheet (‘Michelson_Interferometer_Raw_Data.xlsx’).
+
+Data Analysis:
+
+ Our analysis begins by using the path difference equation which is common when using the Michelson Interferometer. 
+
+d = 2*(Delta)n*l = N*(lambda)
+
+Then, we use a relation between density and the refractive index of a medium:
+
+(rho)/(rho0) = (n-1)/(n0-1)
+
+Additionally, we know that for ideal gases (rho)/(rho0)=P*T0/(P0*T)
+
+If Temperature is constant (which it is for this experiment), our relationship between the refractive index and pressure is:
+
+(delta)n = (n0-1)*(delta)P/P0
+
+Where (delta)n is the deviation of n from 1. 
+
+Finally, we use the fact that (delta)n is N*(lambda)/(2*l) to obtain:
+
+n0 = 1 + N*(lambda)/(2*l) * P0/(delta)P
+
+Which relates our two variables ((delta)P and N) to the index of refraction, which is what we want. 
+
+We propagated our errors in this lab. Our pressure meter was very good, and the computer screen allowed us to count very accurately the number of lines. I would estimate that all of our values of (delta)P are within 1/2 mmHg (or equivalently 0.07kPa), and all of our line counts are within 0.1 lines. 
+
+We did not have any plots for this lab. Our results come in the form of an experimental value for the refractive index of air. I have included the Excel spreadsheet with the analysis of our data, and the values for the refractive index, and relative error and standard deviation. 
+
+On the spreadsheet, we first converted the measurement of (delta)P into kPa from mmHg, and atmospheric pressure into kPa. We converted our value for the length of the air chamber into meters, along with the wavelength of the laser light (both of these values were given to us either in the laboratory manual, or on the equipment itself). We then used this equation to obtain the refractive index of air:
+
+n0 = 1 + N*(lambda)/(2*l) * P0/(delta)P 
+
+After applying this equation to all of our trials, we computed a simple mean of the values and obtained our experimental value of the refractive index of air. We also calculated the standard deviation from the mean, and the relative error of our value with an accepted value found on the internet in a database. 
+
+Results and Discussion:
+
+As stated in the previous section, our main equation was used to calculate the refractive index of air (or any medium):
+
+n0 = 1 + N*(lambda)/(2*l) * P0/(delta)P
+
+Due to the relationship between the values which have errors, the equation which can be used to propagate the errors is:
+
+(delta)n = mag(n) * sqrt(((delta)(delta)P/(delta)P)^2 + ((delta)N/N)^2)
+
+Some of our values for the errors are high, and some are quite low (this is due to the dependence of error on the magnitude of the measurements). I believe that we likely overestimated the magnitude of our errors, since our equipment was quite good. 
+
+To reduce our errors, a new pressure bulb may be required. There was a very small leak in the tube, which we attempted to remedy with another student’s electrical tape. The tape helped significantly, however a small leak persisted. To account for this, we waited until the pressure reading was stable before we released the valve. This allowed us to ensure that we had an accurate reading of pressure for each trail. 
+
+Our final (average) value of the refractive index of air was in excellent agreement. Our value is : n0 = 1.000255 with a standard deviation of 9E-6 (9 parts in a million). 
+
+We began the lab with the basic principles of the Michelson interferometer. The path difference between the two beams of light separated by the beam splitter creates an interference pattern with a certain spacing depending on the wavelength of light and the magnitude of the path difference. Using the principles of an ideal gas, and a relationship between the index of refraction and density, we derived a relationship between the index of refraction, pressure, and the number of diffraction rings seen due to a pressure difference. As we changed the pressure in the air chamber which lied in the path of one of the interferometer’s beams, the number of rings changed. Through careful measurement, we recorded the pressure differences and the number of rings seen due to the difference. Through our derived result, we found the refractive index of air, and our values are very close to the expected result. 
+
+This is by far my most precise measurement of a property of matter. We are all very happy with our measurements and the technique which we used to make measurements. We collaborated well within our group, and I believe the collaboration and effort to make precise measurements payed off. 
+
+Scattering of Light Laboratory
+
+Goal of the Experiment:
+
+In this experiment, our goal was to analyze the angular dependence of light scattering through a dilute concentration of skim milk (unknown concentration). Light scattered off of a molecule will create a spherical pattern of interference. Since the light is scattered in such a small angle, the pattern is only discernible near the the axis of the beam. Our goal for this first setup was to see the effect of the scattering near the axis. In our first setup, we used a red laser light source with a target of the skim milk vial. The second setup was aimed at testing the precision of the instruments. The main objective of these measurements was to calibrate the instruments for future students. The detector, laser, and the vial were in the same plane for the first part of the experiment, and the detector and the laser were perpendicular in the second part, with the laser incident directly above the vial. In theory, the incident light scatters off of the large skim milk particles and creates an interference pattern which can be measured versus angle. As a consequence of the scattering, the light will have more intensity near the angle when the beam and the detector are aligned. For the perpendicular setup, the unpolarized light will have an intensity pattern similar to a wave. When passed through a polarizer, the light will create a different pattern which will allow the future students to measure the strength of the dipoles in the solution. Overall, the experiments were a success. We measured the intensity pattern in the first part to a high degree. We also obtained a clear wave for the second part, showing that the polarization/scattering experiment to measure the dipoles can be completed in the future. 
+
+Experimental Setup and Data Collection:
+
+We started with the first setup (see attached: ‘Setup1.jpg’). The laser, skim milk, and the detector all lie in the same plane. The laser light (632.8nm) is incident on the vial of skim milk (unknown concentration). The light is then either transmitted through the solution or scattered off of the milk molecules, which creates an intensity pattern. The detector is placed on a spinning table, which allows the experimenter to turn the arm through at least 180 degrees to measure the intensity. We began our measurements with the detector arm exactly in line with the axis of the laser light. This was our 0 degree position. However, the instrument was not calibrated for this to be read 0 on the scale, so all of the measurements were made in accordance to the scale reading, and the reference angle was subtracted at the end. We then moved the arm in one direction through a total angle of 90 degrees, measuring the intensity in two degree intervals. Then, we returned to the initial position, and rotated the arm in the opposite direction through an angle of 90 degrees. Our total angle covered was 180 degrees. The data is presented in the attached Excel sheet named “Scattering_Light_Raw.xlxs” on ‘Sheet1’. 
+
+The second experimental setup sketch is presented in the attached ‘Setup2.jpg’). For this setup, the skim milk and the detector were in the same plane, but the laser was aimed downward, perpendicular to the plane of the detector and the milk. The arm was permitted to move through an angle of about 325 degrees (the stand supporting the laser prevented the measurement of the remaining 30 degrees). We started at an angle close to one side of the stand, which we measured to be 30 degrees on the scale. Since in theory the wave should be symmetric about any initial position, we kept this angle as our starting point. We moved the detector arm through a total angle of 324 degrees, taking a measurement of the intensity of light every two degrees, just as in the first part of the experiment. As mentioned in the “Goal of the Experiment” section, the purpose of these measurements was mainly to show the precision of the instruments so future students can perform more complicated laboratories. The raw data is presented in the attached Excel sheet named “Scattering_Light_Raw.xlsx” on ‘Sheet2’. 
+
+Data Analysis:
+
+In total, we had very little data to analyze. We only had one trial of the first setup and one trial of the second setup. The precision of the instruments was excellent, so our errors are were not propagated through the analysis. The main goal of the first part of the experiment was to show the light intensity curve as a function of angular position. Our measurements allowed us to plot a good intensity curve which showed that the intensity increased sharply as we moved the detector close to the axis of the laser light, and fell very sharply when at the axis of the light. This can be explained easily through simple scattering theory. As light is incident on the milk molecules, some of it is scattered through shallow angles, which present itself in the added intensity near the axis, but the light will not pass through the molecules, so there is a significant drop in the intensity at the axis of the laser light. The light curve is presented in the Excel sheet named “Scattering_Light_Lab.xlsx” attached on ‘Sheet1’.
+
+For the second part of the experiment, our goal (as stated before) was to show the general precision of the instruments. Since our scattered light lies on a cylinder which is traced out by the detector, we expect there to be a sinusoidal pattern present itself in the intensity as the light interacts with the solution of the skim milk. From our raw data, this sinusoidal function presents itself very clearly. Such a pattern proves that these instruments are precise enough to perform further experiments, and more complicated calculations can be performed by future groups. The sinusoidal graph is presented in the attached Excel sheet named “Scattering_Light_Lab.xlsx” on ‘Sheet2’.
+
+We did not use any equations for this laboratory. 
+
+Results and Discussion:
+
+As discussed in the analysis portion, we found a good light curve for the first experiment. The curve displays the increasing intensity of light when near the axis of the laser light beam, but also shows the drastic drop in intensity when directly at the axis of the laser light. We expect this from basic scattering theory. 
+
+The second experiment was an overall success for the object that we had. Our goal was to show that the instruments can be used for good precision measurements. From the curve obtained from our experiment, it can be shown that the instruments are indeed precise enough to perform further experiments, such as using a polarizer as to determine the strength of dipoles present in the skim milk solution. 
+
+Further experiments can be done with other simple solutions, such as salt water, more concentrated milk, and other aqueous solutions in order to determine the effect of the solution on the light intensity curve. It would also be interesting to have an apparatus to fully test the experiments done in the papers present on the class website. In those experiments, the undergraduates were able to calculate the size of the skim milk molecules by using their apparatus. Due to lack of materials, we were unable to do so. I hope future students can perform that laboratory. 
+
+Interference and Diffraction Laboratory
+
+Goal of the Experiment:
+
+In this experiment, our goal was to measure the wavelength of light emitted from a sodium lamp. However, as the experiment continued through the available two weeks, our goal became mostly just to see the interference and diffraction lines from the sodium lamp. Previous groups used the provided laser to complete the lab, but we found the lamp to be unique challenge and we persevered. The physics of the setup is fairly simple and well known. We use a single wavelength light source (the sodium lamp) and focus the light onto a single slit with a lens, and then use another lens to collect the single beam so it passes through the double slit apparatus. Then, through careful placement of a direct viewing microscope, we observed the interference pattern of the light through the double slit system. With the geometry of the problem, by knowing the distance from the second lens and the microscope, the distance between the slits, and the separation of the light in the microscope, we can calculate the wavelength of the light source. 
+A similar procedure can be used to find the wavelength by the use of the biprism. Light passed through the prism forms and obtuse angle, and light interferes vertically, which can be observed by the microscope. By using a lens to keep the light from interfering too much, the distance equivalent to the distance between slits can be calculated. Through some more simple geometry, the wavelength can be calculated. 
+However, for both of these experiments, we could not calculate an accurate wavelength. However, with the known wavelength, we determined what the separation between lines should be. 
+
+Experimental Setup and Data Collection:
+
+We attempted to follow the lab manual as carefully as possible in order to achieve the best results. We set up the experiments as drawn in the attachment: ‘Interference_and_Diffraction_Setup.jpg’. 
+The first setup (Young’s Double-Slit Interference) involved the sodium lamp, two lenses of focal length 45mm and 150mm, an adjustable single slit, a double slit, and the direct measurement microscope. We placed the sodium lamp at one end of the track, and placed the 45mm focal length lens 45mm behind it. Behind that, we placed the adjustable single slit 45mm, and then placed the second lens 150mm away. Right behind that we placed the double slit, so the light will interfere. Far away we placed the microscope, to observed the interference pattern. We measured the distance from the double slit to the microscope, and the distance between the double-slits. Then, using the measuring microscope, we set the crosshairs on a constructive interference line, and noted down the reading value. Then we moved the crosshairs to an adjacent constructive line, and measured again. The difference between these two line is our measurement for (delta)x. All collected data is in the attached spreadsheet: ‘Interference_and_Diffraction_Data.xlsx’ on the sheet named “Young’s Double-Slit”. 
+
+For the prism setup, we gain used the 45mm lens placed 45mm away from the sodium and and from the single slit. We then placed the baptism a distance from the single slit, and placed a 150mm lens behind the biprism. This caused the light to focus into two vertical beams, which we measured the distance between. The distance between the two virtual images allowed us to get the characteristic distance of the biprism. This would be used in the wavelength calculations along with the distance between the diffraction patterns without the secondary lens. We removed the 150mm lens as requested by the laboratory manual and then measured the distance between adjacent constructive interference lines. Again, the data collected is presented in the spreadsheet attached, on the “Fresnel’s Biprism” sheet.
+
+Data Analysis:
+
+(Raw data can be found in the spreadsheet attached to the “Experimental Setup and Data Collection” assignment submission.)
+
+The physics of the laboratory is very simple. 
+
+Light is a wave, and thus, it’s amplitudes add. However, this addition is dependent on the phase of the wave. If two waves are in phase, then the amplitudes add constructively. This means that the light is more intense than on it’s own. However, if the waves are out of phase, the amplitudes subtract, cancelling the waves entirely. For the first part of this lab (Young’s Double-Slit), light incident on the double slit must travel to a measurement device. However, when viewed, a strange pattern is produced. This pattern is due to interference. Light from one slit travels further than the other, and thus by the time the light is viewed, it has interfered with itself. This creates an alternating pattern of dark and bright fringes. Some simple geometry (derived in the “Laboratory Exercises” assignment submission) shows that the fringes will appear as intervals according to this equation:
+
+(delta)x = D/d * lambda
+
+Where ‘D’ is the distance between the double-slit apparatus and the measurement device, ‘d’ is the distance between the slits on the double-slit apparatus, ‘lambda’ is the wavelength of the monochromatic light source, and ‘(delta)x’ is the distance between fringes. This lab requested that we measure ‘D’, ‘d’, and ‘(delta)x’ in order to calculate the wavelength of a sodium lamp ‘lambda’. However, our data proved to be very inaccurate and not precise, due to a variety of reasons. Since the wavelength of monochromatic sodium is known well, we used the wavelength to predict the distance between fringes ‘(delta)x’. 
+
+For the second part of the lab (Fresnel’s Biprism), the physics is very similar. The biprism forms an obtuse angle, and diffracts light in two different directions, interfering similarly to the double-slit interference. The equation which governs the fringe patterns is very similar: 
+
+(delta)x = D/d * lambda
+
+Where in this case, ‘(delta)x’ is the distance between fringes, ‘lambda’ is the wavelength of monochromatic sodium, ‘D’ is the distance between the baptism and the measurement source, and ‘d’ is the distance between the virtual images created by the biprism (or what I call the ‘characteristic size’ of the biprism). The characteristic size ‘d’ of the biprism can be found through the lens equation, when a lens is placed between the biprism and the viewing screen. The lens focuses the light into two beams, and the distance between these can be found by the viewing microscope. The distance then can be used with the lens equation to find the characteristic size of the biprism. However, since we believed our microscope to not function well, this means that two of our parameters are dependent on faulty equipment. This means even by knowing the wavelength, we cannot predict either the distance between fringes, or the characteristic size of the biprism well. We attempted to do so however, choosing to keep our measurement for the characteristic size of the biprism as calculated. 
+
+Results and Discussion:
+
+Our results for the lab were very poor. We obtained the wavelength of sodium from Young’s Double-Slit experiment to be 194nm. This is very off from the known wavelength of 589.3nm. We tried very hard to follow the lab manual very closely, and received a lot of help from the instructor. However, even with repeated measurements and a full 12 hours in the lab the past two weeks still yielded poor results. This is not dissimilar from the Fresnel’s Biprism experiment, where we obtained the wavelength of sodium to be 3.7nm. This is even farther away from the correct result than the first part of the lab! 
+
+We tried to keep all of the optics at the correct distances, and measure everything very carefully. I believe the sources of huge error come from several different areas. Firstly, the light source was much weaker than the laser that other groups used. Additionally, the measurements using the microscope seemed very strange. This I believe is a much larger source of error. When I measured the positions of the lines, and them measured them again, the crosshairs seemed to move a non-uniform distance according to the measuring dial. This means I would place the crosshairs on a fringe, take a measurement, then when I went back and moved the crosshairs off the fringes and then back, I got a different measurement. 
+
+In conclusion, I believe that it would have been a better decision to use the more powerful laser to make measurements. However, it was very interesting to see the interference of the sodium lamp. The laser would have yielded better results and we could have had more precise measurements of the wavelength, without use of the microscope, a major source of error. I also am led to believe that we used the lens equation for the biprsim section incorrectly. The results we get are very odd, and due to the problems encountered in the first part of the lab, we did not have a good opportunity to ask the instructor about the theory of measuring the characteristic size of the biprism. In the future, I would recommend that other groups use the laser rather than the sodium source!
+
+Polarization Laboratory
+
+Goal of the Experiment:
+
+In this experiment, we aim to study the effect that polarization has on monochromatic light. We will do this by measuring the light intensity of monochromatic light after it passes through a series of polarizers. The resultant intensity as a function of angle rotated will produce a trigonometric function according to the law of Malus. 
+
+Experimental Setup and Data Collection:
+
+The setup portion of this laboratory was essentially completed before we entered the room. The light source, both polarizers, and the detector were all aligned and plugged in, just as in the attached illustration of the set up (‘Polarization_Setup.jpg’). We ensured that all of the optical equipment was functioning as expected, and aligned the instruments again to make sure everything was correct. After confirming the equipment was aligned, we turned on the detector, and set the instrument to measure the light intensity. 
+
+We set both polarizers to polarize the light vertically, and turned off the lights. We rotated the second polarizer in increments of 2 degrees, and made a measurement of the intensity at each interval. We inserted our raw data into the attached spreadsheet (‘Polarization_Raw.xlsx’).
+
+Data Analysis:
+
+The data analysis for the laboratory was fairly straightforward. We expect the polarization light curve to resemble a cosine function. Since we measured the intensity in very regular intervals and so often, we obtained a fantastic light curve. We plotted the light intensity in mW/cm^2 versus the angular displacement of the second polarizer in degrees. The light curve is attached in the spreadsheet (‘Polarization.xlsx’). We were instructed to only plot the light curve, which obeys Malus’ Law (I = I0*cos^2(theta)). 
+
+Results and Discussion:
+
+We obtained the light curve presented in the previous section (Data Analysis). This curve is precisely the Law of Malus. The period of the curve is 180˚, and there are no negative values as expected from the Malus’ Law. The value for I0 is simply the initial value when both polarizers are aligned at 0˚ separation (1.6 mW/cm^2). Polarization is an interesting topic which has many applications. The study of light curves and the various types of polarization is very important to the general study of physics. In this lab we focused on linearly polarized light which obeys Malus’ Law (I = I0*cos^2(theta)). Malus’ law leads to several interesting effects, such as the case where three polarizers aligned each at 45˚ apart from the last will still allow light to pass, even though the first and third polarizers are aligned at a 90˚ separation. 
+
+Fabry-Perot Interferometer and the Zeeman Effect Laboratory
+
+Goal of the Experiment:
+
+The goal of the experiment is to measure the instrumental parameter of the Fabry-Perot interferometer, namely 4*f^2/d. Additionally, we will study the Zeeman effect by calculating the distance between concentric rings imaged through the laptop, and using the diameters to calculate the electron charge to mass ratio. 
+
+Experimental Setup and Data Collection:
+
+The setup of this laboratory was quite difficult. We first attempted to follow the instructions on another lab for which our equipment was not set up, so we spent a long time preparing for an experiment we could not perform. However, once we followed the manual for the correct lab, setup was not difficult. We placed the small mercury lamp in the center of the solenoid pair, and placed the light collimator immediately outside of the solenoid pair, followed by the filter, the Etalon, the polarizer (only during the Zeeman Effect part of the experiment), the imagine lens, and finally the detector. The detector was connected to the supplied laptop with software which allowed us to image the concentric interference rings. An illustration is presented in the attached image (‘Fabry-Perot_Interferometer_and-Zeeman_Effect_Setup.jpg’).
+
+We used the software to measure the diameter of the rings when there was no polarizer, for which the data is presented in the attached spreadsheet on the first sheet named “Farby-Perot_Interferometer” (‘Fabry-Perot_Interferometer_and_Zeeman_Effect_Raw.xlsx’). We will use these data to measure the instrumental parameter. 
+
+After that, we inserted the polarizer and set it to several different angles, and measured the ring diameter of the resulting images. The rings split into two separate concentric rings, due to the Zeeman effect. Again, the data is presented in the attached spreadsheet on the second sheet named “Zeeman_Effect” (‘Fabry-Perot_Interferometer_and_Zeeman_Effect_Raw.xlsx’).
+
+Data Analysis:
+
+We used the data collected in the first part of the experiment to calculate the instrumental parameter of the Fabry-Perot Interferometer. The necessary equation was given in the lab manual as:
+
+∆D^2 = D^2(m-1) - D^2(m) = 4*f^2*(lambda)/d
+
+Since we knew the diameters of four rings, we could simply square each data point and then subtract the smaller ring from the larger ring. We could do this three times for each measurement ((K+3)-(K+2), (K+2)-(K+1), (K+1)-K). Using these, we divided by the value of lambda (253.7nm), and were able to obtain the result for the instrumental parameter, 4*f^2/d. The values are presented on the first sheet named “Fabry-Perot_Interferometer” in the attached spreadsheet (‘Fabry-Perot_Interferometer_and_Zeeman_Effect.xlsx’).
+
+The second part of the experiment focused on measuring the charge to mass ratio of the electron. We used the equation given in the lab manual:
+
+e/m = (2*pi*c)/((M2g2-M1g1)*B*d)*((D^2(b)-D^2(a))/(D^2(m-1)-D^2(m)))
+
+Where c is the speed of light, M2g2-M1g1 is related to the mass of the electron, B is the applied magnetic field, d is a parameter inherent to the Fabry-Perot Etalon, and the quotient of differences of the squares of the diameters are all measured values from the software. 
+
+We noted the value of B from the instrument, and used the values given in the lab manual for d and M2g2-M1g1. Since we had the diameters from the software, we could simply square the values and find their differences needed for the application of the above equation. Once we had the values, we were able to just use the equation and then find the percentage error of the e/m ratio. 
+
+Results and Discussion:
+
+All values discussed below are presented in the spreadsheet in the previous section (Data Analysis). 
+
+The values that we obtained for the instrumental parameter were fairly close to one another for each measurement (compared with the size of the parameter). The standard deviation of ∆D^2 within a measurement was about 10%. 
+
+The average instrumental parameter found was 57.8. We do not have a value to compare to this, but two of our measurements were very close to one another, leading us to believe this is a fairly consistent value which can be trusted. 
+
+For the Zeeman effect portion of this experiment, we obtained decent results (about the same order of magnitude). 
+
+Unfortunately, when taking data we chose the wrong lines to analyze, so our answers already had serious errors. 
+
+Instead of measuring an inner radius, we measured the outer ring of an inner set of rings. (meaning our ‘m’ ring was really an ‘m-1’ ring). However, when we calculated the e/m ratio from our data, we found the result to be within the same order of magnitude of the true e/m ratio. Our values for e/m were:
+6.8E12, 8.5E12, 9.6E12, and 9.16E12. The true value of e/m is about 2E11, so our values were quite close considering we measured the wrong rings. 
+
+Single Photon Interference Laboratory
+
+
+Goal of the Experiment:
+
+In this experiment we aim to demonstrate the wave-particle duality of light. We will use the theory of Young’s double slit to demonstrate the interference pattern generated by photons. However, instead of using a constant light source, the apparatus will take advantage of the particle nature of light by sending small numbers of discrete photons to the detector. This will show that light is a particle, and the interference pattern will show that light behaves like a wave.
+
+Experimental Setup and Data Collection:
+
+The setup for this experiment was fairly complicated, and took a bit of effort. A sketch of the setup is attached (‘Single_Photon_Interference_Setup.jpg’), and a discussion is provided below. 
+The apparatus we used comes in three distinct parts. Firstly, we have the two-slit interference apparatus. This housed the laser and bulb, the double-slit, and the photomultiplier tube. Second, we have the oscilloscope which allowed us to view the output from the photomultiplier. Finally, we have the photon counting device. This device used a gating mechanism to count the number of photons encountered in a fixed time interval (10s). The fixed interval is important because it gives us an opportunity to measure an average number of photons through repeated measurement. Some images of the equipment are attached (‘Photomultiplier_Apparatus.jpg’, ’Oscilloscope.jpg’, ’Photon_Counter.jpg’).
+
+After we received a lot of help from the instructor Dr. Choudhary, we were finally able to count photons and try to observed the wave nature of photons. 
+
+We reset the counter, and then set the position of the measurement to the right-most position in the apparatus. We aimed to scan from right to left. Once we were at the right-most position, we started the counter, and waited for the ten seconds to pass. We noted the number of photons, and then repeated this process for a total of 4 measurements per position. Then we moved the position to the left by .25mm. We did this from 10mm to 0mm for a total of about 160 measurements. All collected data can be found in the attached spreadsheet, along with a quick plot of the number of photons vs position (‘Single_Photon_Interference.xlsx’). 
+
+Data Analysis:
+
+The apparatus worked as planned, and was able to count discrete photons with the help of the counter. As mentioned before, the aim was to demonstrate the wave-particle duality. Since the photons were counted one-by-one, it is evident that light is a particle. 
+The purpose of scanning inside the apparatus was to develop an interference pattern which coincides with the interference pattern generated by a double-slit. 
+The interference pattern is generated due to the phase difference in the light as it comes through either slit. This is accurately described by the wave nature of light, and the light fringes can be seen as:
+
+pi*D/lambda *sin(theta)=(m+1/2)pi
+
+Dark fringes by:
+
+pi*D/lambda*sin(theta) = m*pi
+
+Since the slits are of a finite width, we have a situation where we observe equally spaced interference fringes, however their intensity follows an envelope according to:
+
+I (prop) (sin(pi*a/lambda*sin(theta))^2/(pi*a/lambda*sin(theta))^2
+
+As we can see in the attached spreadsheet (‘Single_Photon_Interference.xlsx’), we observe somewhat of a profile as described, however with a lot of random noise. Particularly, we observe a clean peak and two adjacent peaks around the 4-6mm range, with a clear decay of the intensity around the main peak. This is consistent with the above intensity profile. As we increased our number of measurements, the noise decreased (since we took the average of the measurements). 
+
+Results and Discussion:
+
+Overall, we achieved our goal. The attached spreadsheet (despite the noise) clearly shows the interference pattern due to a finite sized double slit near the 4-6mm range (‘Single_Photon_Interference.xlsx’). 
+The fact that the photons travel individually, and do not interfere with one another and are able to be counted discretely shows that the nature of light can be described as a particle. However, with the clear profile of interference, we see that light also behaves as a wave, since waves interfere with a double slit according to Young’s experiment. So the problem is reconciling these two views of EM radiation. Light behaves as a single particle, however also interferes with itself like a wave. This is the wave-particle duality, which leads ultimately to the need for the development of quantum mechanics. 
+I believe if we were to take 10 measurements per position, and averaged over a longer period of time (100s), then the noise would decrease. Additionally, if we had more time, we could measure at more positions to get a better distribution. If I were to perform this experiment again, I would take measurements every .10 mm across the whole 10mm range, for a total of 100 measurement positions. Also, I would take a minimum of 10 measurements at each position, for a total of 1000 measurements. I believe that this would reduce the noise significantly, and give a clear interference pattern. 
