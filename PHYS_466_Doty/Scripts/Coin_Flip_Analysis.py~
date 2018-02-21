@@ -1,0 +1,11 @@
+# Patrick McMillin
+# PHYS 466  Dr. Doty
+# 20 February 2018
+
+import numpy as np
+
+def main():
+    Data = np.loadtxt('Experimental_Data/Quarter_300.txt')
+    print(Data)
+
+main()

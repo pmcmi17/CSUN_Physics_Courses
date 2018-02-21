@@ -8,6 +8,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import pprint as pp
 from Integrate_Gaussian import Integrate_Trapezoid
+import scipy.optimize as opt
 
 def main():
     Data = Load_Data()
@@ -97,8 +98,14 @@ def Plot_Histogram_and_Gaussian(Data, Mean, Std_Dev):
     plt.savefig('Plots/Experiment_1_Histogram_and_Gaussian.pdf')
     plt.show()
 
-def Gaussian_Function(x, mu = 85.4, sigma = 9.3, norm = 240.):
+def Gaussian_Function(x, mu = 86.03476904, sigma = 9.53245969, norm = 241.60610734):
     return (norm/(sigma*np.sqrt(2*(np.pi))))*np.exp(-1*((x-mu)**2)/(2*(sigma**2)))
+
+#def Chi_Sq_Mini(norm, mu, sigma): 
+#    G = lambda x: (norm/(sigma*np.sqrt(2*(np.pi))))*np.exp(-1*((x-mu)**2)/(2*(sigma**2)))
+    
+#    Chi_squ = np.sum((Integral-Exp)**2/Integral)
+#    return Chi_squ
     
 def Plot_Five_Bin_Hist_and_Chi_Fit(Data):
     Mean = round(np.mean(Data), 1)

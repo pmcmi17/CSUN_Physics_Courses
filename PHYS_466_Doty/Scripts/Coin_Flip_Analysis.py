@@ -9,6 +9,16 @@ def main():
     Data = np.loadtxt('Experimental_Data/Quarter_300.txt')
     Events = Bin_Events(Data)
     #print(Events)
+    print("Mean of raw data:")
+    print(np.mean(Data))
+    print("Standard Deviation of Data:")
+    print(np.std(Data))
+    print("Mean of # in a row:")
+    print(np.mean(Events))
+    print("Standard Deviation of # in a row:")
+    print(np.std(Events))
+
+    
     Plotting(Events)
     
 def Bin_Events(Data):
@@ -22,14 +32,20 @@ def Bin_Events(Data):
             Events.append(j)
             j = 1
         i += 1
-    # Binned al but the last one so add it manually
+    # Binned all but the last one so add it manually
     Events.append(1)
     return Events
 
+def line(x):
+    return (1./2.)**x
+
 def Plotting(Events):
-    plt.hist(Events)
-    x = np.linspace(1,10,100)
-    #plt.plot(x, (80*((1/2)**x)))
+    n, bins, trash = plt.hist(Events)
+    print(n)
+    #print(bins)
+    x = np.linspace(1,10,1000)
+    plt.plot(x,160*line(x))
+    plt.savefig('Plots/Coin_Flip_Histo.pdf')
     plt.show()
     
 main()

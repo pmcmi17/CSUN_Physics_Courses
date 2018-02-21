@@ -130,10 +130,16 @@ The statistical mechanics and thermodynamics of the binding process.
 
 \begin_deeper
 \begin_layout Enumerate
+General Information
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 The implicit solvent model used which models water as a continuum.
  
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 The Universal Correction 
 \end_layout
@@ -164,8 +170,50 @@ Effective Potential
 \begin_deeper
 \begin_layout Enumerate
 3D-RISM gives us some potentials that we use to find the effective potential
- needed in binding claculations (I will make the equation soon to put here
- in the outline).
+ needed in binding claculations.
+ This is a simple average.
+ 
+\begin_inset Formula 
+\begin{equation}
+\overline{E}=\langle E_{MM}+\mu_{excess}\rangle
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Entropy Contributions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+By using an end-state analysis script called MMPBSA.py, we calculate the
+ entropy through nomral-mode analysis of an ensemble of snapshots throughout
+ the simulation.
+ This calculation gives us the translational, rotational, and vibrational
+ entropic contributions.
+ We are now working on calculating the entropies for our data sets.
+ This can be quite computationally expensive.
+ 
+\end_layout
+
+\begin_layout Enumerate
+However it is vastly important to also consider the conformational entropy
+ involved in the dynamics process.
+ The conformational entropy is directly proportional to the average of the
+ second power of the fluctuations of the effective potential.
+ CITE CHONG AND HAM HERE.
+\begin_inset Formula 
+\begin{equation}
+T\Delta S_{Conf}=\frac{{1}}{k_{B}T}\overline{{\delta E^{2}}}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -176,8 +224,17 @@ Exponential Averaging
 \begin_deeper
 \begin_layout Enumerate
 Essential part of the analysis.
- Uses partition functions to find the average energy (I have to make this
- equation as well).
+ Uses partition functions to find the average energy.
+ We are not presently at this stage of the analysis.
+ CITE EXPONENTIAL AVERAGING PAPER HERE.
+\begin_inset Formula 
+\begin{equation}
+\Delta G=\beta^{-1}\ln\langle e^{-\beta\Delta U(\vec{q)}}\rangle_{0}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -195,21 +252,64 @@ Molecule Parameterization
 \begin_layout Enumerate
 Used TLEAP to parameterize molecules for simulation, define parameters used
  and the minimization/equilibration process.
+ 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Simulation Preparation
+Simulation and Data Acquisition
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-How we used the cluster to run batch jobs.
+Through the use of Dr.
+ Luchko's cluster, we simulated the molecule complexes through a batch system.
+ Simulations were performed each on a single CPU and completed within 30
+ hours of submission.
+ Once the molecules are properly parameterized, the simulation is performed
+ in three steps.
+ 
 \end_layout
 
 \begin_layout Enumerate
-How we pulled data out and we will use.
+Minimization
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Here the energies of the system are allowed to move from their original
+ parameterized position to find a minumum configuration.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Equilibration
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is no different from a production run in the sense that the system
+ is allowed to move and dynamics are recorded.
+ The purpose of equilibration is to allow the system a short window to run
+ before full molecular dynamics is performed.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Production
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Production runs are where data are collected from.
  
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+We parsed through the output files to find the relevent data, and placed
+ them in a data frame which can be maipulated easily.
+ Most of the data selection was done through the use of the 'pandas' module.
 \end_layout
 
 \end_deeper
@@ -222,6 +322,8 @@ Results
 \begin_layout Enumerate
 Here will be the figures of the data.
  Still working on the analysis, so I do not have a placeholder yet.
+ The final products will likely be in the form of tables.
+ 
 \end_layout
 
 \end_deeper
@@ -233,7 +335,6 @@ Discussion
 \begin_layout Enumerate
 Discussion of important figures/tables.
  Will look at the comparison between our results and experiment.
- 
 \end_layout
 
 \end_deeper
@@ -243,7 +344,8 @@ Conclusions
 
 \begin_deeper
 \begin_layout Enumerate
-Here we make claims about the effectivness of the water model.
+Here we make claims about the effectivness of the 3D-RISM when calculating
+ the binding free energies of host-guest pairs.
 \end_layout
 
 \end_deeper
