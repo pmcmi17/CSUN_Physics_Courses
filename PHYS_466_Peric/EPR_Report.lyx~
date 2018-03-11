@@ -1,0 +1,172 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass elsarticle
+\options 5p,twocolumn
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout BeginFrontmatter
+Here we go
+\end_layout
+
+\begin_layout Title
+EPR Fitting of an Unknown Substance with EasySpin
+\end_layout
+
+\begin_layout Author
+Patrick McMillin
+\end_layout
+
+\begin_layout Author
+Department of Physics and Astronomy
+\end_layout
+
+\begin_layout Author
+California State University Northridge
+\end_layout
+
+\begin_layout Author
+8 March 2018
+\end_layout
+
+\begin_layout Abstract
+Here is the abstract!
+\end_layout
+
+\begin_layout EndFrontmatter
+there we go?
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Now we test this double column formatiing! Need enough text to see if it
+ wraps around.
+ Not sure how much we will need, but let''s populate anouther section to
+ see how it goes!
+\end_layout
+
+\begin_layout Section
+Theory
+\end_layout
+
+\begin_layout Standard
+Wow! Easy to switch sections.
+ Here I'll put some formulas that I don't quite understand because we didn't
+ really have a quantum teacher!
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Standard
+Oh great! I get to talk about MATLAB here.
+ Too bad I can only say what we did objectively.
+ I would complain a lot here if I could.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Here will be a lot of work.
+ I will need to learn how to import the figures and fit them to the coumn
+ length! On top of that, I'll need to learn how to add some descriptive
+ text below them.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+Great! I don't really know what to write here yet, but I suppose I will
+ have to conclude something.
+ 
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\begin_layout Standard
+Here we cite a few things.
+ Some online resources, maybe the Liboff book and such.
+ And of course Peric's stuff on the Canvas page.
+ 
+\end_layout
+
+\end_body
+\end_document

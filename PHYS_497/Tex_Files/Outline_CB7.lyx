@@ -121,6 +121,22 @@ Binding Energies
 \begin_deeper
 \begin_layout Enumerate
 The statistical mechanics and thermodynamics of the binding process.
+\begin_inset Formula 
+\begin{equation}
+\Delta G^{0}=\overline{{\Delta f_{U}}}-T(\Delta S_{conf}+\Delta S_{ext})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\overline{E}=\langle E_{MM}+\mu_{excess}\rangle
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -152,30 +168,22 @@ This is used to correct for the partial molar volume of the molecules which
 
 \end_deeper
 \begin_layout Enumerate
-Enclosures
+Closures
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 These are part of the RISM parameters, and I still need to do some reading.
+ We used the KH closure.
  
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Enumerate
-Effective Potential
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-3D-RISM gives us some potentials that we use to find the effective potential
- needed in binding claculations.
- This is a simple average.
- 
+Bridges the Ornstein-Zernike equation.
+ The solution to this equation is where much of the dyncamics comes from.
 \begin_inset Formula 
 \begin{equation}
-\overline{E}=\langle E_{MM}+\mu_{excess}\rangle
+h(r_{12})=c(r_{12})+\rho\int c(r_{13})h(r_{32})d\textbf{{r_{3}}}
 \end{equation}
 
 \end_inset
@@ -183,6 +191,7 @@ Effective Potential
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Entropy Contributions
@@ -196,7 +205,8 @@ By using an end-state analysis script called MMPBSA.py, we calculate the
  This calculation gives us the translational, rotational, and vibrational
  entropic contributions.
  We are now working on calculating the entropies for our data sets.
- This can be quite computationally expensive.
+ Additionally, we used the quasi-harmonic approximation to calculate the
+ entropy, and will compare the results.
  
 \end_layout
 
@@ -250,66 +260,19 @@ Molecule Parameterization
 
 \begin_deeper
 \begin_layout Enumerate
-Used TLEAP to parameterize molecules for simulation, define parameters used
- and the minimization/equilibration process.
- 
+Used TLEAP to parameterize molecules for simulation, define parameters used.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Simulation and Data Acquisition
+Simulation Preparation
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Through the use of Dr.
- Luchko's cluster, we simulated the molecule complexes through a batch system.
- Simulations were performed each on a single CPU and completed within 30
- hours of submission.
- Once the molecules are properly parameterized, the simulation is performed
- in three steps.
- 
-\end_layout
-
-\begin_layout Enumerate
-Minimization
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Here the energies of the system are allowed to move from their original
- parameterized position to find a minumum configuration.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Equilibration
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-This is no different from a production run in the sense that the system
- is allowed to move and dynamics are recorded.
- The purpose of equilibration is to allow the system a short window to run
- before full molecular dynamics is performed.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Production
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Production runs are where data are collected from.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-We parsed through the output files to find the relevent data, and placed
- them in a data frame which can be maipulated easily.
- Most of the data selection was done through the use of the 'pandas' module.
+Minimizing, equilibrating, and producing the structures through 'sander',
+ which is part of the AMBER molecular modeling suite.
+ Total of 100 ns of simulation time.
 \end_layout
 
 \end_deeper
