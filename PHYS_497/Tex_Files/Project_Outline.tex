@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{authblk}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{siunitx}
+\graphicspath{ {../Plots/} }
+\title{Binding Free Energies of Host-Guest Complexes Using 3D RISM}
+\author{Patrick McMillin}
+\affil{Department of Physics and Astronomy, California State University Northridge}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item Abstract
+	\begin{enumerate}
+		\item Abstract goes here! I have a draft for this, but I moved it so it will be the base of the introduction.
+	\end{enumerate}
+	\item Introduction
+	\begin{enumerate}
+		\item Binding information is very important to drug design because drugs must bind to structures in the cell to be effective. Simulation of protein bindings yields valuable information to drug designers, since it helps map the areas where drugs can stick well. However, explicitly simulating every atom is massively expensive because of the size of typical proteins and the number of water molecules in the system. To overcome this computational cost, we used the 3D reference interaction site model (RISM), rather than explicitly simulating each water molecule. We simulated the small host molecule cucurbit[7]uril CB7 with 16 guest molecules in order to calculate their binding energies.
+	\end{enumerate}
+	\item Theory
+	\begin{enumerate}
+		\item Binding Energies
+		\begin{enumerate}
+			\item The statistical mechanics and thermodynamics of the binding process.
+			\begin{equation}
+				\Delta G^{0}=\overline{{\Delta E_{U}}}-T(\Delta S_{conf}+\Delta S_{ext})
+			\end{equation}
+			\begin{equation}
+				\Delta G = \langle \Delta G_c \rangle - \langle \Delta G_h \rangle - \langle \Delta G_g \rangle
+			\end{equation}
+			\begin{equation}
+				\Delta G = \langle E_c-TS_c \rangle - \langle	E_h-TS_h \rangle - \langle E_g-TS_g \rangle
+			\end{equation}
+			\begin{equation}
+				\Delta G = \langle E_c - E_h - E_g \rangle - T\langle S_c - S_h - S_g\rangle
+			\end{equation}
+			\begin{equation}
+				\overline{E}=\langle E_{MM}+\mu_{excess}\rangle
+			\end{equation}
+		\end{enumerate}
+		\item 3D-RISM
+		\begin{enumerate}
+			\item General Information
+			\begin{enumerate}
+				\item The implicit solvent model used which models water as a continuum. 
+			\end{enumerate}
+			\item The Universal Correction
+			\begin{enumerate}
+				\item This is used to correct for the partial molar volume of the molecules which 3D-RISM can't handle.
+					\begin{equation}
+						\Delta G_{UC} = \Delta G_{RISM} + \alpha (\rho \overline{V}) + \beta
+					\end{equation}
+			\end{enumerate}
+			\item Closures
+			\begin{enumerate}
+				\item These are part of the RISM parameters, and I still need to do some reading. We used the KH closure. 
+				\item Bridges the Ornstein-Zernike equation. The solution to this equation is where much of the dyncamics comes from.
+				\begin{equation}
+					h(r_{12})=c(r_{12})+\rho\int c(r_{13})h(r_{32})dr_{3}
+				\end{equation}
+			\end{enumerate}
+		\end{enumerate}
+		\item Entropy Contributions
+		\begin{enumerate}
+			\item By using an end-state analysis script called MMPBSA.py, we calculate the entropy through nomral-mode analysis of an ensemble of snapshots throughout the simulation. This calculation gives us the translational, rotational, and vibrational entropic contributions. We are now working on calculating the entropies for our data sets. Additionally, we used the quasi-harmonic approximation to calculate the entropy, and will compare the results. 
+			\item However it is vastly important to also consider the configurational entropy involved in the dynamics process. The configurational entropy is directly proportional to the variance of the effective potential. CITE CHONG AND HAM HERE.
+			\begin{equation}
+				T\Delta S_{Conf}=\frac{{1}}{k_{B}T}\overline{{\delta E_U^{2}}}
+			\end{equation}
+		\end{enumerate}
+		\item Exponential Averaging
+		\begin{enumerate}
+			\item Essential part of the analysis. Uses partition functions to find the average energy. We are not presently at this stage of the analysis. CITE EXPONENTIAL AVERAGING PAPER HERE.
+			\begin{equation}
+				\Delta G=\beta^{-1}\ln\langle e^{-\beta\Delta U(\vec{q)}}\rangle_{0}
+			\end{equation}
+			\begin{equation}
+				\Delta A_{g,UC} = \Delta A_{g,RISM} + \Delta A_{RISM,UC}
+			\end{equation}
+			\begin{equation}
+				\Delta A_{g,UC} = k_B T ln\langle e^{\beta \Delta \mu_{solv} (R)} \rangle_{RISM} -k_B T ln\langle e^{-\beta (\Delta G_{UC} (R) - \Delta \mu_{solv} (R))} \rangle_{RISM}
+			\end{equation}
+		\end{enumerate}
+	\end{enumerate}
+	\item Methods
+	\begin{enumerate}
+		\item Molecule Parameterization
+		\begin{enumerate}
+			\item Used TLEAP to parameterize molecules for simulation, define parameters used.
+		\end{enumerate}
+		\item Simulation Preparation
+		\begin{enumerate}
+			\item Minimizing, equilibrating, and producing the structures through 'sander', which is part of the AMBER molecular modeling suite. Total of 100 ns of simulation time.
+		\end{enumerate}
+	\end{enumerate}
+	\item Results
+	\begin{enumerate}
+		\item Here will be the figures of the data. Still working on the analysis, so I do not have a placeholder yet. The final products will likely be in the form of tables. 
+	\end{enumerate}
+	\item Discussion
+	\begin{enumerate}
+		\item Discussion of important figures/tables. Will look at the comparison between our results and experiment.
+	\end{enumerate}
+	\item Conclusion
+	\begin{enumerate}
+		\item Here we make claims about the effectivness of the 3D-RISM when calculating the binding free energies of host-guest pairs.
+	\end{enumerate}
+\end{enumerate}
+\end{document}
